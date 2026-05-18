@@ -42,24 +42,25 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
-
+![Alt text](<Screenshot at 2026-05-14 14-36-35.png>)
 
 cat < file2
 ## OUTPUT
-
+![Alt text](image.png)
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+![Alt text](<Screenshot at 2026-05-15 16-02-47.png>)
  
 comm file1 file2
  ## OUTPUT
+ ![Alt text](<Screenshot at 2026-05-15 16-04-17.png>)
 
  
 diff file1 file2
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-15 16-04-53.png>)
 
 #Filters
 
@@ -82,17 +83,17 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-15 16-08-47.png>)
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
-
+![Alt text](<Screenshot at 2026-05-15 16-10-09.png>)
 
 cut -d "|" -f 2 file22
 ## OUTPUT
+![Alt text](<Screenshot at 2026-05-15 16-11-00.png>)
 
 
 cat < newfile 
@@ -100,47 +101,49 @@ cat < newfile
 Hello world
 hello world
 ^d
-````
+```
 cat > newfile 
 Hello world
 hello world
  
 grep Hello newfile 
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-15 16-18-23.png>)
 
 
 grep hello newfile 
 ## OUTPUT
 
 
-
+![Alt text](<Screenshot at 2026-05-15 16-18-23.png>)
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-15 16-19-33.png>)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-15 16-20-23.png>)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-15 16-21-04.png>)
 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-
-
-
+![Alt text](<Screenshot at 2026-05-15 16-21-55.png>)
+![Alt text](<Screenshot at 2026-05-15 16-22-55.png>)
+![Alt text](<Screenshot at 2026-05-15 16-23-28.png>)
+![Alt text](<Screenshot at 2026-05-15 16-23-58.png>)
 grep -w -n world newfile   
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-07-01.png>)
 
 cat < newfile 
 ```
@@ -163,60 +166,60 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
+![Alt text](<Screenshot at 2026-05-18 13-08-52.png>)
 
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-09-43.png>)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-10-18.png>)
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-11-04.png>)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-11-50.png>)
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-12-24.png>)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-13-19.png>)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
-
+![Alt text](<Screenshot at 2026-05-18 13-13-50.png>)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-14-25.png>)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-14-52.png>)
 
 egrep l{2} newfile
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 13-15-36.png>)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![Alt text](<Screenshot at 2026-05-18 13-16-14.png>)
 
 cat > file23
 ```
@@ -235,79 +238,82 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-18 13-17-16.png>)
 
 
 sed -n -e '$p' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-17-47.png>)
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-18-20.png>)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-19-22.png>)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-20-10.png>)
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-20-40.png>)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-54-54.png>)
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-55-55.png>)
 
 seq 10 
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-56-49.png>)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-57-34.png>)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-59-05.png>)
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 13-59-48.png>)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-18 14-00-46.png>)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 14-01-40.png>)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 14-02-42.png>)
 
 sed -n '2,4{s/$/*/;p}' file23
 
+![Alt text](<Screenshot at 2026-05-18 14-03-20.png>)
 
 #Sorting File content
 cat > file21
@@ -321,6 +327,7 @@ cat > file21
 sort file21
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-18 14-04-20.png>)
 
 cat > file22
 ```
@@ -334,12 +341,14 @@ cat > file22
 uniq file22
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 14-05-50.png>)
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+
+ ![Alt text](<Screenshot at 2026-05-18 14-06-40.png>)
 
 cat < urllist.txt
 ```
@@ -357,18 +366,23 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 14-08-03.png>)
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 14-08-47.png>)
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
-
+![Alt text](<Screenshot at 2026-05-18 14-10-06.png>)
+![Alt text](<Screenshot at 2026-05-18 14-11-10.png>)
+![Alt text](<Screenshot at 2026-05-18 14-11-41.png>)
+![Alt text](<Screenshot at 2026-05-18 14-12-08.png>)
+![Alt text](<Screenshot at 2026-05-18 14-12-43.png>)
+![Alt text](<Screenshot at 2026-05-18 14-13-20.png>)
+ 
 mkdir backupdir
  
 mv backup.tar backupdir
@@ -377,20 +391,31 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-
+![Alt text](<Screenshot at 2026-05-18 14-15-14.png>)
+![Alt text](<Screenshot at 2026-05-18 14-16-08.png>)
+![Alt text](<Screenshot at 2026-05-18 14-17-01.png>)
+![Alt text](<Screenshot at 2026-05-18 14-17-55.png>)
+![Alt text](<Screenshot at 2026-05-18 14-18-35.png>)
+![Alt text](<Screenshot at 2026-05-18 14-19-03.png>)
+![Alt text](<Screenshot at 2026-05-18 14-19-29.png>)
 
 tar -xvf backup.tar
 ## OUTPUT
+![Alt text](<Screenshot at 2026-05-18 14-20-56.png>)
+![Alt text](<Screenshot at 2026-05-18 14-21-34.png>)
+
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- 
+ ![Alt text](<Screenshot at 2026-05-18 14-24-21.png>)
+
 gunzip backup.tar.gz
 ## OUTPUT
 
- 
+ ![Alt text](<Screenshot at 2026-05-18 14-25-23.png>)
+
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
@@ -412,6 +437,7 @@ stop
 cat herecheck.txt
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-18 14-30-05.png>)
 
 cat < scriptest.sh 
 ```bash
@@ -450,24 +476,32 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
- 
+![Alt text](<Screenshot at 2026-05-18 14-32-04.png>) 
+
 ls file1
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-18 14-32-32.png>)
+
 echo $?
 ## OUTPUT 
+
+![Alt text](<Screenshot at 2026-05-18 14-33-19.png>)
+
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+
+![Alt text](<Screenshot at 2026-05-18 14-34-17.png>)
  
 abcd
  
 echo $?
  ## OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 14-34-50.png>)
  
 # mis-using string comparisons
 
@@ -499,13 +533,14 @@ fi
 ```
 ##OUTPUT
 
-
+![Alt text](<Screenshot at 2026-05-18 14-35-53.png>)
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
 
+![Alt text](<Screenshot at 2026-05-18 14-36-58.png>)
 
 # check file ownership
 cat < psswdperm.sh 
